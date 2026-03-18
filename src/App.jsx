@@ -1,30 +1,39 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import AdminLogin from "./admin/Login";
 import Dashboard from "./admin/DashBoard";
 import AdminRoute from "./components/AdminRoute";
+
 import Home from "./user/Home";
 import Cart from "./user/Cart";
 import UserLogin from "./user/Login";
-import UserSignup from './user/Signup'
+import UserSignup from "./user/Signup";
 import UserProfile from "./user/Profile";
+
 import AuthSelect from "./AuthSelect";
 
 function App() {
   return (
     <Routes>
+
+      {/* Home */}
       <Route path="/" element={<Home />} />
+
+      {/* User Pages */}
       <Route path="/profile" element={<UserProfile />} />
       <Route path="/cart" element={<Cart />} />
 
-      {/* Role Select */}
+      {/* Role Selection */}
       <Route path="/auth" element={<AuthSelect />} />
 
-      {/* User Auth */}
+      {/* User Authentication */}
       <Route path="/user/login" element={<UserLogin />} />
       <Route path="/user/signup" element={<UserSignup />} />
 
-      {/* Admin */}
+      {/* Admin Authentication */}
       <Route path="/admin-login" element={<AdminLogin />} />
+
+      {/* Protected Admin Dashboard */}
       <Route
         path="/admin"
         element={
@@ -34,7 +43,9 @@ function App() {
         }
       />
 
-      <Route path="*" element={<Navigate to="/auth" />} />
+      {/* Redirect unknown routes */}
+      <Route path="*" element={<Navigate to="/auth" replace />} />
+
     </Routes>
   );
 }

@@ -323,26 +323,26 @@ const stockPercent = Math.min(
   <img
     src="https://cdn11.bigcommerce.com/s-gmsn9rvs48/product_images/uploaded_images/sub-banner-01.jpg"
     alt=""
-    className="w-full h-full object-cover"
+    className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-full object-cover"
   />
 
   {/* Top-right text */}
-  <p className="absolute top-6 left-6 z-10  px-30  py-20 text-white text-sm text-start rounded">
+  <p className="absolute top-6 left-6 z-10 px-6 sm:px-10 md:px-16 py-4 sm:py-6 md:py-8 text-white text-sm md:text-base text-start rounded">
     Shop And Save Big Hottest Deals
   </p>
 
   {/* Bottom-left title */}
-  <p className="absolute bottom-6 left-6 z-10 px-30 py-15 text-white text-4xl font-bold  rounded">
+  <p className="absolute bottom-6 left-6 z-10 px-6 sm:px-10 md:px-16 py-3 sm:py-5 md:py-6 text-white text-2xl sm:text-3xl md:text-4xl font-bold rounded">
     New Smart Phones
   </p>
 
   {/* Price + CTA (bottom-right) */}
-  <div className="absolute bottom-9 right-6 z-10 px-30 py-15 text-white rounded-lg flex flex-col items-end gap-1">
-    <div className="flex items-center gap-2 font-bold text-lg">
+  <div className="absolute bottom-9 right-6 z-10 px-6 sm:px-10 md:px-16 py-3 sm:py-5 md:py-6 text-white rounded-lg flex flex-col items-end gap-1">
+    <div className="flex items-center gap-2 font-bold text-sm sm:text-base md:text-lg">
       <DollarSign className="text-yellow-400 w-5 h-5 hover:rotate-180 transition-transform duration-300" />
       <span>79.00 only</span>
     </div>
-    <span className="text-sm underline underline-offset-4 cursor-pointer hover:text-yellow-400 transition">
+    <span className="text-xs sm:text-sm underline underline-offset-4 cursor-pointer hover:text-yellow-400 transition">
       Shop now
     </span>
   </div>
